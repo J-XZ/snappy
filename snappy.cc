@@ -1028,7 +1028,7 @@ size_t AdvanceToNextTagARMOptimized(const uint8_t** ip_p, size_t* tag) {
   return tag_type;
 }
 
-SNAPPY_ATTRIBUTE_ALWAYS_INLINE
+inline
 size_t AdvanceToNextTagX86Optimized(const uint8_t** ip_p, size_t* tag) {
   const uint8_t*& ip = *ip_p;
   // This section is crucial for the throughput of the decompression loop.
